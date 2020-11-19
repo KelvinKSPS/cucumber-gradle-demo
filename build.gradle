@@ -40,7 +40,7 @@ dependencies {
 
 
 test {
-    dependsOn assemble, compileTestJava
+    dependsOn assemble, compileTestJava, cleanTest
 	
     doLast {
    	    javaexec {

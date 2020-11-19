@@ -86,11 +86,10 @@ public class SiDiMainPageObject extends GenericPageObject {
 		return pageUrl;
 	}
 
-	public SiDiMainPageObject open() {
+	public SiDiMainPageObject open() throws InterruptedException {
 		this.driver.get(this.pageUrl);
-
 		this.verifyPageLoaded().handleCookiePopUp();
-
+		Thread.sleep(3000);
 		return this;
 	}
 
